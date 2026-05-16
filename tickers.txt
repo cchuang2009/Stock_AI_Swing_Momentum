@@ -1,42 +1,42 @@
-AAOI,
-    aehr,
-    AG,
-    AGIX,
-    AI,
-    alab,
-    AMAT,
-    AMD,
-    anet,
-    BBAI,
-    BLSH,
-    BTG,
-    CBRS,
-    CCOI,
-    COHR,
-    CRDO,
-    DGXX,
-    DXYZ,
-    EUV,
-    INTC,
-    IONQ,
-    ISRG,
-    LITE,
-    LMT,
-    NOK,
-    NUAI,
-    MELI,
-    MRVL,
-    MU,
-    NBIS,
-    NVDA,
-    PLTR,
-    PAPL,
-    PLUG,
-    POET,
-    PYPL,
-    QBTS,
-    LWLG,
-    QUBT,
-    RGTI,
-    SMCI,
-    SNDK
+AAOI
+aehr
+AG
+AGIX
+AI
+alab
+AMAT
+AMD
+anet
+BBAI
+BLSH
+BTG
+CBRS
+CCOI
+COHR
+CRDO
+DGXX
+DXYZ
+EUV
+INTC
+IONQ
+ISRG
+LITE
+LMT
+NOK
+NUAI
+MELI
+MRVL
+MU
+NBIS
+NVDA
+PLTR
+PAPL
+PLUG
+POET
+PYPL
+QBTS
+LWLG
+QUBT
+RGTI
+SMCI
+SNDK
