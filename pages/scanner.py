@@ -2,52 +2,13 @@
 import streamlit as st
 from core.scoring import calculate_score
 from data.market_data import get_market_data
+from data.github_loader import load_tickers_from_github
+
+DEFAULT_URL = "https://raw.githubusercontent.com/cchuang2009/Stock_AI_Swing_Momentum/main/tickers.txt"
 
 st.title("Nasdaq AI Scanner")
 
-default_watchlist = [
-    "AAOI",
-    "aehr",
-    "AG",
-    "AGIX",
-    "AI",
-    "alab",
-    "AMAT",
-    "AMD",
-    "anet",
-    "BBAI",
-    "BLSH",
-    "BTG",
-    "CCOI",
-    "COHR",
-    "CRDO",
-    "DGXX",
-    "DXYZ",
-    "EUV",
-    "INTC",
-    "IONQ",
-    "ISRG",
-    "LITE",
-    "LMT",
-    "NOK",
-    "NUAI",
-    "MELI",
-    "MRVL",
-    "MU",
-    "NBIS",
-    "NVDA",
-    "PLTR",
-    "PAPL",
-    "PLUG",
-    "POET",
-    "PYPL",
-    "QBTS",
-    "LWLG",
-    "QUBT",
-    "RGTI",
-    "SMCI",
-    "SNDK"
-]
+default_watchlist = load_tickers_from_github(DEFAULT_URL)
 
 user_input = st.text_input(
     "Add custom tickers (comma separated)",

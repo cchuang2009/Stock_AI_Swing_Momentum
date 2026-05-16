@@ -1,51 +1,13 @@
 
 import streamlit as st
 import pandas as pd
+from data.github_loader import load_tickers_from_github
+
 
 st.title("Custom Watchlist Tracker")
+DEFAULT_URL = "https://raw.githubusercontent.com/cchuang2009/Stock_AI_Swing_Momentum/main/tickers.txt"
 
-default_watchlist = [
-       "AAOI",
-    "aehr",
-    "AG",
-    "AGIX",
-    "AI",
-    "alab",
-    "AMAT",
-    "AMD",
-    "anet",
-    "BBAI",
-    "BLSH",
-    "BTG",
-    "CCOI",
-    "COHR",
-    "CRDO",
-    "DGXX",
-    "DXYZ",
-    "INTC",
-    "IONQ",
-    "ISRG",
-    "LITE",
-    "LMT",
-    "NOK",
-    "NUAI",
-    "MELI",
-    "MRVL",
-    "MU",
-    "NBIS",
-    "NVDA",
-    "PLTR",
-    "PAPL",
-    "PLUG",
-    "POET",
-    "PYPL",
-    "QBTS",
-    "LWLG",
-    "QUBT",
-    "RGTI",
-    "SMCI",
-    "SNDK"
-]
+default_watchlist = load_tickers_from_github(DEFAULT_URL)
 
 watch_input = st.text_input(
     "Watchlist",

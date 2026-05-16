@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from data.github_loader import load_tickers_from_github
 
 st.title("Intraday Breakout Tracker")
 
@@ -13,46 +14,10 @@ Detect:
 - Momentum acceleration
 """)
 
-symbols = [   "AAOI",
-    "aehr",
-    "AG",
-    "AGIX",
-    "AI",
-    "alab",
-    "AMAT",
-    "AMD",
-    "anet",
-    "BBAI",
-    "BLSH",
-    "BTG",
-    "CCOI",
-    "COHR",
-    "CRDO",
-    "DGXX",
-    "DXYZ",
-    "INTC",
-    "IONQ",
-    "ISRG",
-    "LITE",
-    "LMT",
-    "NOK",
-    "NUAI",
-    "MELI",
-    "MRVL",
-    "MU",
-    "NBIS",
-    "NVDA",
-    "PLTR",
-    "PAPL",
-    "PLUG",
-    "POET",
-    "PYPL",
-    "QBTS",
-    "LWLG",
-    "QUBT",
-    "RGTI",
-    "SMCI",
-    "SNDK"]
+DEFAULT_URL = "https://raw.githubusercontent.com/cchuang2009/Stock_AI_Swing_Momentum/main/tickers.txt"
+
+
+symbols = load_tickers_from_github(DEFAULT_URL)
 
 rows = []
 
